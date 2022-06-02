@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.time.LocalDateTime;
 
 @RestController
-@RequestMapping("api/v1/messages")
+@RequestMapping("messages")
 public class MessageController {
 
     private KafkaTemplate<String, Message> kafkaTemplate;
@@ -21,6 +21,6 @@ public class MessageController {
     @PostMapping
     public void publish(@RequestBody MessageRequest request){
         Message message = new Message(request.message(), LocalDateTime.now());
-        kafkaTemplate.send("fcastro", message);
+        kafkaTemplate.send("message-topic", message);
     }
 }

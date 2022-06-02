@@ -9,12 +9,12 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.fcastro</groupId>
-	<artifactId>kafka-producer</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>kafka-producer</name>
-	<description>Demo project for Spring Boot</description>
+	<artifactId>kafka-application</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<name>kafka-application</name>
+	<description>Basic project for Kafka</description>
 	<properties>
-		<java.version>15</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -48,8 +48,8 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
-					<source>15</source>
-					<target>15</target>
+					<source>17</source>
+					<target>17</target>
 					<compilerArgs>--enable-preview</compilerArgs>
 				</configuration>
 			</plugin>

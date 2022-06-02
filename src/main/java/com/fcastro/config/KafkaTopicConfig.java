@@ -9,8 +9,8 @@ import org.springframework.kafka.config.TopicBuilder;
 public class KafkaTopicConfig {
 
     @Bean
-    public NewTopic fcastroTopic() {
-        return TopicBuilder.name("fcastro")
+    public NewTopic messageTopic() {
+        return TopicBuilder.name("message-topic")
                 .build();
     }
 }

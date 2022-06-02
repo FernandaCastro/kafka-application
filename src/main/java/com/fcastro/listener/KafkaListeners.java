@@ -8,12 +8,13 @@ import org.springframework.stereotype.Component;
 public class KafkaListeners {
 
     @KafkaListener(
-        topics="fcastro",
+        topics="message-topic",
         groupId = "groupId",
         containerFactory = "messageFactory"
     )
 
     void listener(Message message){
-        System.out.println("Listener received: " + message + " 🎉");
+        String processed = "Listener received: " + message;
+        System.out.println(processed);
     }
 }
